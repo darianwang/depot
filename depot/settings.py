@@ -12,9 +12,9 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'OPTION': {
+        'OPTIONS': {
         'read_default_file': '/etc/my.cnf',
-        }
+        },
         'NAME': 'depot',                      # Or path to database file if using sqlite3.
         'USER': 'darian',                      # Not used with sqlite3.
         'PASSWORD': 'buxingde',                  # Not used with sqlite3.
@@ -125,7 +125,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    depotapp,
+    'depotapp',
 )
 
 # A sample logging configuration. The only tangible logging
