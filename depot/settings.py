@@ -1,4 +1,5 @@
 # Django settings for depot project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -20,7 +21,7 @@ DATABASES = {
         'PASSWORD': 'buxingde',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
+        }
 }
 
 # Local time zone for this installation. Choices can be found here:
@@ -113,14 +114,15 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
+TEMPLATE_DIRS += (os.path.join(  os.path.dirname(os.path.dirname(__file__)), 'templates') ,)
 
 INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
+#'django.contrib.auth',
+#    'django.contrib.contenttypes',
+#   'django.contrib.sessions',
+##   'django.contrib.sites',
+#  'django.contrib.messages',
+#   'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
